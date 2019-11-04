@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @param <T>
  */
 @Data
-public class ResultData<T> implements Serializable {
+public class ResultVO<T> implements Serializable {
 
 
     private static final long serialVersionUID = 5679855537586185898L;

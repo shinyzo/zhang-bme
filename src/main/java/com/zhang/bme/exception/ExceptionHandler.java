@@ -14,17 +14,17 @@ public class ExceptionHandler {
 
     @org.springframework.web.bind.annotation.ExceptionHandler(SQLException.class)
     @ResponseBody
-    public ResultData sqlException(){
+    public ResultVO sqlException(){
 
-        return  ResultVOUtil.ERROR(ErrorEnum.SQL_ERROR);
+        return  ResultVOUtil.error(ErrorEnum.SQL_ERROR);
 
     }
 
     @org.springframework.web.bind.annotation.ExceptionHandler(Exception.class)
     @ResponseBody
-    public ResultData exception(){
+    public ResultVO exception(){
 
-        return  ResultVOUtil.ERROR(ErrorEnum.ERROR);
+        return  ResultVOUtil.error(ErrorEnum.ERROR);
     }
 
 

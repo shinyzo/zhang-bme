@@ -19,9 +19,12 @@ public class FilterConfig {
     public FilterRegistrationBean casAuthTicketFilter(){
         FilterRegistrationBean registrationBean = new FilterRegistrationBean();
         registrationBean.setFilter(new CASLoginFilter());
-        // 拦截规则
-        registrationBean.addUrlPatterns("/*");
-        registrationBean.addInitParameter("excludedURL","/layui/,/test,/login,/loginauth");
+        // 拦截需要登录的规则
+        registrationBean.addUrlPatterns("/api/*");
+        registrationBean.addUrlPatterns("/main/*");
+        registrationBean.addUrlPatterns("/admin/*");
+
+        registrationBean.addInitParameter("excludedURL","/login,/loginauth");
         registrationBean.setName("casAuthTicketFilter");
         registrationBean.setOrder(0);
         return registrationBean;

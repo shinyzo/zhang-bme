@@ -1,9 +1,7 @@
 package com.zhang.bme.controller;
 
-import com.zhang.bme.SpringContextUtil;
 import com.zhang.bme.cas.CasClientProperties;
 import lombok.extern.slf4j.Slf4j;
-import org.jasig.cas.client.authentication.AttributePrincipal;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -45,13 +42,6 @@ public class SSOController {
         return "/main/main";
     }
 
-
-    @RequestMapping("/test")
-    @ResponseBody
-    public String test(){
-
-        return "no need login,i am test ." ;
-    }
 
     @RequestMapping("/sso/logout")
     public String logout(HttpServletRequest request){

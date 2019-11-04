@@ -4,10 +4,12 @@ package com.zhang.bme.exception;
 public class ResultVOUtil {
 
 
+    public static ResultVO SUCCESS = success();
 
-    public static ResultData SUCCESS(Object object){
 
-        ResultData resultVO = new ResultData() ;
+    public static ResultVO success(Object object){
+
+        ResultVO resultVO = new ResultVO() ;
         resultVO.setCode(ErrorEnum.SUCCESS.getCode());
         resultVO.setMsg(ErrorEnum.SUCCESS.getMsg());
         resultVO.setData(object);
@@ -15,14 +17,14 @@ public class ResultVOUtil {
     }
 
 
-    public static ResultData SUCCESS()
+    public static ResultVO success()
     {
-        return SUCCESS(null );
+        return success(null );
     }
 
 
-    public static ResultData ERROR(ErrorEnum errorEnum){
-        ResultData resultVO = new ResultData() ;
+    public static ResultVO error(ErrorEnum errorEnum){
+        ResultVO resultVO = new ResultVO() ;
         resultVO.setCode(errorEnum.getCode());
         resultVO.setMsg(errorEnum.getMsg());
         resultVO.setData(null);
