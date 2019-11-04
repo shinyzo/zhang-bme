@@ -1,0 +1,23 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /bme
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+    application:
+    name: bme
+    profiles:
+      active: pro
+    http:
+      encoding:
+        charset: utf-8
+        enabled: true
+
+    thymeleaf:
+       cache: false
+       prefix: classpath:/templates/
+       suffix: .jsp
+       encoding: UTF-8
+
+

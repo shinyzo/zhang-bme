@@ -1,0 +1,10 @@
+# cas 单点登录设置
+cas:
+    serverUrlPrefix: http://192.168.33.195:9090/cas
+    serverLoginUrl: http://192.168.33.195:9090/cas/login
+    serverValidate: http://192.168.33.195:9090/cas/serviceValidate
+    serverLogoutUrl: http://192.168.33.195:9090/cas/logout?service=http://localhost:8888/bme/sso/logout
+    clientHostUrl: http://192.168.33.195:8888/bme
+    clientLoginUrl: http://localhost:8888/bme/login
+    clientLogoutUrl: http://localhost:8888/bme/sso/logout
+    onOff: off
